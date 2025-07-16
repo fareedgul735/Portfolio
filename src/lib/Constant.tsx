@@ -1,4 +1,4 @@
-import { AppstoreOutlined, HomeOutlined, MailOutlined, ProjectOutlined, SettingTwoTone, ToolOutlined, UserOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, BgColorsOutlined, BulbOutlined, HomeOutlined, MailOutlined, MoonOutlined, ProjectOutlined, SettingTwoTone, SunOutlined, ToolOutlined, UserOutlined } from "@ant-design/icons";
 
 export const NavLinks = [
     { title: "Home", path: "/", icon: <HomeOutlined /> },
@@ -9,7 +9,8 @@ export const NavLinks = [
     { title: "Contact", path: "contact", icon: <MailOutlined /> },
 ]
 
-export const Themes = [
-    { title: "Themes", icon: <SettingTwoTone /> }
-
+export const ThemeContent = [
+    { title: "Light Theme", icon: <SunOutlined /> },
+    { title: "Dark Theme", icon: <MoonOutlined /> },
+    { title: "Gradient Theme", icon: <BgColorsOutlined /> }
 ]

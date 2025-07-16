@@ -1,12 +1,24 @@
-import { Link, NavLink, Outlet } from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom"
 import "./Layout.css"
-import { NavLinks } from "./lib/Constant"
-import { Button, Drawer, Popover } from "antd"
-import { BulbOutlined, CloseSquareFilled, DesktopOutlined, MenuOutlined, MoonOutlined, SettingTwoTone } from '@ant-design/icons';
+import { NavLinks, ThemeContent } from "./lib/Constant"
+import { Drawer, Popover, Select } from "antd"
+import { BgColorsOutlined, CloseOutlined, MenuOutlined, MoonOutlined, SunOutlined } from '@ant-design/icons';
 import { useState, type FC } from "react";
+import { Option } from "antd/es/mentions";
 
 const Layout: FC = () => {
     const [open, setOpen] = useState(false);
+
+    const [visible, setVisible] = useState(false);
+
+    const handleVisible = (visibility: boolean) => {
+        setVisible(visibility)
+    }
+
+    const handleVisibleClick = () => {
+        setVisible(false)
+    }
+
 
     const showDrawer = () => {
         setOpen(true)
@@ -15,20 +27,16 @@ const Layout: FC = () => {
         setOpen(false)
     }
 
-    const settingContent = (
+    const themeSetting = (
         <div className="theme-settings">
-            <div className="theme-option">
-                <BulbOutlined className="theme-icon" />
-                <span>Light Theme</span>
-            </div>
-            <div className="theme-option">
-                <MoonOutlined className="theme-icon" />
-                <span>Dark Theme</span>
-            </div>
-            <div className="theme-option">
-                <DesktopOutlined className="theme-icon" />
-                <span>System Theme</span>
-            </div>
+            {ThemeContent.map((item, index) => {
+                return (
+                    <div className="theme-option" key={index} onClick={handleVisibleClick}>
+                        <span className="theme-icon">{item.icon}</span>
+                        <span className="popover-title">{item.title}</span>
+                    </div>
+                )
+            })}
         </div>
     );
 
@@ -48,34 +56,36 @@ const Layout: FC = () => {
                             )
                         })
                     }
-                    <Popover
-                        placement="bottom"
-                        title={<span className="popover-title">Theme Settings</span>}
-                        content={settingContent}
-                        trigger="click"
-                    >
-                        <Button>Themes</Button>
-                    </Popover>
+
                 </div>
+                <Popover
+                    placement="bottom"
+                    title={<span className="popover-title">Theme Settings</span>}
+                    content={themeSetting}
+                    trigger="click"
+                    open={visible}
+                    onOpenChange={handleVisible}
+                >
+                    <button className="theme-toggle-btn">Switch Theme</button>
+
+                </Popover>
             </div>
 
             <div className="navbar-small-screen">
                 <div className="small-logo">
                     {"< FK />"}
                 </div>
-                <div className="menu-btn">
-                    <Button
-                        type="none"
-                        icon={<MenuOutlined className="menu-icon" style={{
+                <div className="menu-btn" onClick={showDrawer}>
+                    <span>
+                        <MenuOutlined className="menu-icon" style={{
                             fontSize: '20px',
                             fontWeight: "900",
                             color: 'white',
                             cursor: 'pointer',
                             transition: 'transform 0.3s ease',
-                        }}
-                        />}
-                        onClick={showDrawer}
-                    />
+                        }} />
+                    </span>
+
                 </div>
                 <Drawer
                     title={
@@ -90,11 +100,11 @@ const Layout: FC = () => {
                     }
                     placement="top"
                     closable={true}
-                    closeIcon={<CloseSquareFilled className="custom-close" />}
+                    closeIcon={<CloseOutlined className="custom-close" />}
                     key="top"
                     open={open}
                     onClose={onClose}
-                    height={400}
+                    height={550}
                     className="drawer-custom"
                 >
                     <div className="nav-links-small">
@@ -109,6 +119,17 @@ const Layout: FC = () => {
                                 <span className="link-text">{item.title}</span>
                             </NavLink>
                         ))}
+                    </div>
+                    <div className="selector-wrap">
+                        <Select
+                            defaultValue="Theme Setting"
+                            className="theme-select"
+                            size="small"
+                        >
+                            <Option value="light"><SunOutlined /> Light</Option>
+                            <Option value="dark"><MoonOutlined /> Dark</Option>
+                            <Option value="system"> <BgColorsOutlined />Gradient Theme</Option>
+                        </Select>
                     </div>
                 </Drawer>
 
