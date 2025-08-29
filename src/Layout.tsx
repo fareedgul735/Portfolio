@@ -18,7 +18,7 @@ const Layout: FC = () => {
   return (
     <div className="layout-wrapper">
       <div className="navbar-wrapper">
-        <div className="logo">{"< Fareed Khan />"}</div>
+        <div className="logo">{"< Fareed Gul />"}</div>
         <div className="nav-links">
           {NavLinks.map((item, index) => {
             return (
@@ -34,7 +34,7 @@ const Layout: FC = () => {
         </div>
       </div>
       <div className="navbar-small-screen">
-        <div className="small-logo">{"< FK />"}</div>
+        <div className="small-logo">{"< FG />"}</div>
         <div className="menu-btn" onClick={showDrawer}>
           <span>
             <MenuOutlined
@@ -57,7 +57,7 @@ const Layout: FC = () => {
                 alt="avatar"
                 className="drawer-avatar"
               />
-              <span className="drawer-logo">{"< Fareed Khan />"}</span>
+              <span className="drawer-logo">{"< Fareed Gul />"}</span>
             </div>
           }
           placement="top"
