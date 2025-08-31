@@ -4,7 +4,7 @@
   align-items: center;
   color: var(--white-color);
   padding: 3rem 5rem;
-  min-height: 100vh;
+  height: auto;
 }
 
 .left {
@@ -114,7 +114,7 @@
 @media (max-width: 600px) {
   .parent {
     flex-direction: column;
-    padding: 1.5rem 1rem; 
+    padding: 1.5rem 1rem;
     text-align: center;
     margin-top: 88px !important;
     width: 100%;
@@ -150,14 +150,14 @@
   }
 
   .buttons {
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
     gap: 0.8rem;
   }
 
   .cvBtn,
   .hireMe {
-    width: 100%; 
+    width: 100%;
     font-size: 0.9rem;
     padding: 0.7rem;
   }

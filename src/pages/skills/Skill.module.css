@@ -1,0 +1,265 @@
+.skillSection {
+  padding: 4rem 2rem;
+  width: 100% !important;
+}
+.skillText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  margin-left: 12% !important;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--cyan-color);
+}
+.underline {
+  width: 60px;
+  height: 3px;
+  background: var(--cyan-color);
+  border-radius: 4px;
+}
+
+.subTitle {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 12px !important;
+  margin-bottom: 2rem;
+}
+
+.skillCarousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.skillTrack {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skillItem {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  text-align: center;
+  color: var(--white-color);
+  transition: transform 0.3s ease;
+}
+.skillItem:hover {
+  animation: jump 0.6s ease;
+  cursor: pointer !important;
+}
+.skillItem > p {
+  font-weight: 600;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 10px;
+  position: relative;
+  background: white; /* bg white add kiya */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.html {
+  color: #e44d26;
+}
+.html:hover {
+  box-shadow: 0 0 20px #e44d26;
+}
+
+.css {
+  color: #2965f1;
+}
+.css:hover {
+  box-shadow: 0 0 20px #2965f1;
+}
+
+.js {
+  color: #f0db4f;
+}
+.js:hover {
+  box-shadow: 0 0 20px #f0db4f;
+}
+
+.react {
+  color: #61dafb;
+}
+.react:hover {
+  box-shadow: 0 0 20px #61dafb;
+}
+
+.node {
+  color: #68a063;
+}
+.node:hover {
+  box-shadow: 0 0 20px #68a063;
+}
+
+.mongo {
+  color: #4db33d;
+}
+.mongo:hover {
+  box-shadow: 0 0 20px #4db33d;
+}
+
+.ts {
+  color: #3178c6;
+}
+.ts:hover {
+  box-shadow: 0 0 20px #3178c6;
+}
+
+.next {
+  color: #000000;
+}
+.next:hover {
+  box-shadow: 0 0 20px #000000;
+}
+
+.express {
+  color: #444444;
+}
+.express:hover {
+  box-shadow: 0 0 20px #444444;
+}
+
+.bootstrap {
+  color: #7952b3;
+}
+.bootstrap:hover {
+  box-shadow: 0 0 20px #7952b3;
+}
+
+.tailwind {
+  color: #38bdf8;
+}
+.tailwind:hover {
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+.mongoose {
+  color: #880000;
+}
+.mongoose:hover {
+  box-shadow: 0 0 20px #880000;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .skillSection {
+    padding: 3rem 1.5rem;
+  }
+  .skillText {
+    margin-left: 8% !important; /* thoda kam */
+    align-items: center !important; /* center align text */
+    text-align: center;
+  }
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .subTitle {
+    font-size: 0.95rem;
+  }
+  .skillItem {
+    width: 100px;
+    margin: 0 15px;
+  }
+  .circle {
+    width: 85px;
+    height: 85px;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillSection {
+    padding: 2.5rem 1rem;
+  }
+  .skillText {
+    margin-left: 0 !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  .subTitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .skillItem {
+    width: 80px;
+    margin: 0 10px;
+  }
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 1.4rem;
+  }
+  .skillItem > p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillSection {
+    padding: 2rem 0.8rem;
+  }
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  .subTitle {
+    font-size: 0.8rem;
+  }
+  .skillItem {
+    width: 50px;
+    margin: 0 8px;
+  }
+  .circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  .skillItem > p {
+    font-size: 0.75rem;
+  }
+}

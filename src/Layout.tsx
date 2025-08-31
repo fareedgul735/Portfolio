@@ -92,6 +92,7 @@ const Layout: FC = () => {
       </div>
 
       <Tooltip
+        open
         title={<span style={{ fontWeight: "bold" }}>Messge on WhatsApp</span>}
         color="green"
         placement="left"
