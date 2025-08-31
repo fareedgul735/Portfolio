@@ -96,7 +96,7 @@ const Layout: FC = () => {
         color="green"
       >
         <a
-          href="https://wa.me/923222156119"
+          href="https://wa.me/923243259241"
           target="_blank"
           rel="noopener noreferrer"
           className="hire-me"
