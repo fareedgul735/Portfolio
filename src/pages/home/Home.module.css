@@ -13,7 +13,7 @@
 }
 
 .right {
-  flex: 1;
+  flex: 0.4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +51,9 @@
   margin-top: 1.5rem;
 }
 
-.cvBtn {
-  background: var(--cyan-color);
+.cvBtn,
+.hireMe {
+  background: var(--light-cyan-color);
   color: var(--white-color);
   border: none;
   padding: 0.8rem 1.5rem;
@@ -67,15 +68,100 @@
   background: var(--dark-cyan-color);
   box-shadow: var(--info-color) 0px 3px 8px;
 }
+.hireMe:hover {
+  background: var(--dark-cyan-color);
+  box-shadow: var(--info-color) 0px 3px 8px;
+}
 
 .profileImage {
-  max-width: 300px;
+  max-width: 340px;
   border-radius: 12px;
   font-weight: 700;
   box-shadow: 0 0 20px var(--cyan-color);
 }
 
 @media (max-width: 992px) {
+  .parent {
+    flex-direction: column;
+    padding: 2rem 1.5rem; /* left-right padding kam kiya */
+    margin-top: 88px !important;
+    width: 100%; /* full screen cover kare */
+    text-align: center; /* center align */
+  }
+
+  .left {
+    max-width: 100%; /* puri width */
+    width: 100%;
+  }
+
+  .buttons {
+    width: 100%; /* buttons stretch */
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .cvBtn,
+  .hireMe {
+    flex: 1; /* tablet pe equal space le */
+    padding: 0.7rem 1rem;
+  }
+
+  .profileImage {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .parent {
+    flex-direction: column;
+    padding: 1.5rem 1rem; 
+    text-align: center;
+    margin-top: 88px !important;
+    width: 100%;
+  }
+
+  .left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .left > h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .left > h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+  }
+
+  .contactInfo {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .contactInfo p {
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    flex-direction: column; 
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .cvBtn,
+  .hireMe {
+    width: 100%; 
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
   .profileImage {
     display: none !important;
   }

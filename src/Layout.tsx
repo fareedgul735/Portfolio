@@ -57,7 +57,7 @@ const Layout: FC = () => {
           title={
             <div className="drawer-title-wrapper">
               <img
-                src="https://i.pravatar.cc/100"
+                src="/fareedgul.jpg"
                 alt="avatar"
                 className="drawer-avatar"
               />
@@ -92,8 +92,9 @@ const Layout: FC = () => {
       </div>
 
       <Tooltip
-        title={<span style={{ fontWeight: "bold" }}>Hire Me on WhatsApp</span>}
+        title={<span style={{ fontWeight: "bold" }}>Messge on WhatsApp</span>}
         color="green"
+        placement="left"
       >
         <a
           href="https://wa.me/923243259241"

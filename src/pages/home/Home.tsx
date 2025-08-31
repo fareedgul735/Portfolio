@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import style from "./Home.module.css";
 import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const Home: FC = () => {
   return (
@@ -38,13 +39,18 @@ const Home: FC = () => {
         </div>
 
         <div className={style.buttons}>
-          <button className={style.cvBtn}>View CV</button>
+          <a href="/fareedgul.pdf" target="_blank" rel="noopener noreferrer">
+            <button className={style.cvBtn}>View CV</button>
+          </a>
+          <Link to={"/contact"}>
+            <button className={style.hireMe}>Hire Me</button>
+          </Link>
         </div>
       </div>
 
       <div className={style.right}>
         <img
-          src=""
+          src="/fareedgul.jpg"
           alt="Profile"
           className={style.profileImage}
         />
