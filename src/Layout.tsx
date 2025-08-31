@@ -1,8 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "./Layout.css";
 import { NavLinks } from "./lib/Constant";
-import { Drawer } from "antd";
-import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import { Drawer, Tooltip } from "antd";
+import {
+  CloseOutlined,
+  MenuOutlined,
+  WhatsAppOutlined,
+} from "@ant-design/icons";
 import { useState, type FC } from "react";
 
 const Layout: FC = () => {
@@ -86,6 +90,20 @@ const Layout: FC = () => {
           </div>
         </Drawer>
       </div>
+
+      <Tooltip
+        title={<span style={{ fontWeight: "bold" }}>Hire Me on WhatsApp</span>}
+        color="green"
+      >
+        <a
+          href="https://wa.me/923222156119"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hire-me"
+        >
+          <WhatsAppOutlined />
+        </a>
+      </Tooltip>
 
       <div className="main-container">
         <div className="outlet-wrapper">
