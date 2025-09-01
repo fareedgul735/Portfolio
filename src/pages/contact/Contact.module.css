@@ -1,0 +1,158 @@
+.parent {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8% !important;
+  gap: 1rem;
+}
+
+.hireMe {
+  color: var(--cyan-color);
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background: var(--cyan-color);
+  border-radius: 4px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.iconBox {
+  width: 45px;
+  height: 45px;
+  background: var(--white-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transforhireMem 0.3s ease, background 0.3s ease;
+}
+
+.icon {
+  font-size: 22px;
+  color: var(--cyan-color);
+}
+
+.iconBox:hover {
+  transform: scale(1.15);
+  background: #f0fdfa;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--white-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #333;
+}
+
+.input,
+.textarea {
+  border-radius: 8px !important;
+  padding: 10px;
+  font-weight: 500;
+}
+.input:hover,
+.textarea:hover {
+  border-color: var(--cyan-color) !important;
+  box-shadow: 0 0 4px var(--cyan-color) !important;
+  border: 1px solid var(--cyan-color) !important;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--cyan-color) !important;
+  box-shadow: 0 0 4px var(--cyan-color) !important;
+  border: 1px solid var(--cyan-color) !important;
+}
+
+.submitBtn {
+  height: 45px;
+  border-radius: 8px !important;
+  font-weight: 600;
+  background: var(--cyan-color) !important;
+  border: none !important;
+}
+
+@media (max-width: 1024px) {
+  .parent {
+    margin-left: 4% !important;
+    padding: 3rem 1.5rem;
+  }
+
+  .formContainer {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .formContainer {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .parent {
+    margin-left: 0 !important;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .formContainer {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 14px;
+  }
+
+  .submitBtn {
+    font-size: 14px;
+    height: 40px;
+  }
+}

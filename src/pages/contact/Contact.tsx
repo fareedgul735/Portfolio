@@ -1,11 +1,121 @@
-import type { FC } from "react"
+import type { FC } from "react";
+import { Input, Button, Tooltip, Form } from "antd";
+import {
+  GithubOutlined,
+  LinkedinOutlined,
+  TwitterOutlined,
+} from "@ant-design/icons";
+
+import style from "./Contact.module.css";
 
 const Contact: FC = () => {
-    return (
-        <div>
-            Contact
-        </div>
-    )
-}
+  const onFinish = (values: string) => {
+    console.log(values, "values in forma ");
+  };
+  return (
+    <div className={style.parent}>
+      <div className={style.hireMe}>
+        <h2>Hire Me</h2>
+        <div className={style.underline}></div>
+      </div>
 
-export default Contact
+      <div className={style.socialLinks}>
+        <Tooltip title={"Github"} placement="left" color="cyan">
+          <a
+            href="https://github.com/account"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.iconBox}
+          >
+            <GithubOutlined className={style.icon} />
+          </a>
+        </Tooltip>
+        <Tooltip title={"Linkedin"} placement="top" color="cyan">
+          <a
+            href="https://www.linkedin.com/in/fareed-khan-946329333/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHFj1E3C%2FQWKjLNMC8j2IEQ%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.iconBox}
+          >
+            <LinkedinOutlined className={style.icon} />
+          </a>
+        </Tooltip>
+        <Tooltip title={"Twitter"} placement="right" color="cyan">
+          <a
+            href="https://x.com/khan73986khan?s=21"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.iconBox}
+          >
+            <TwitterOutlined className={style.icon} />
+          </a>
+        </Tooltip>
+      </div>
+
+      <Form
+        name="contact-form"
+        layout="vertical"
+        className={style.formContainer}
+        onFinish={onFinish}
+      >
+        <div className={style.row}>
+          <Form.Item
+            label="First Name"
+            name="firstName"
+            rules={[
+              { required: true, message: "Please enter your first name" },
+            ]}
+            className={style.formGroup}
+          >
+            <Input
+              placeholder="Enter your first name"
+              className={style.input}
+            />
+          </Form.Item>
+
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              { required: true, message: "Please enter your email" },
+              { type: "email", message: "Please enter a valid email" },
+            ]}
+            className={style.formGroup}
+          >
+            <Input placeholder="Enter your email" className={style.input} />
+          </Form.Item>
+        </div>
+
+        <Form.Item
+          label="Message"
+          name="message"
+          rules={[{ required: true, message: "Please enter your message" }]}
+          className={style.formGroup}
+        >
+          <Input.TextArea
+            placeholder="Write your message"
+            rows={4}
+            className={style.textarea}
+          />
+        </Form.Item>
+
+        <Tooltip
+          open
+          placement="bottom"
+          title={
+            <span style={{ fontWeight: "bold", fontSize: "16px" }}>
+              Your message will be sent to my email
+            </span>
+          }
+          color="cyan"
+        >
+          <Button type="primary" htmlType="submit" className={style.submitBtn}>
+            SEND
+          </Button>
+        </Tooltip>
+      </Form>
+    </div>
+  );
+};
+
+export default Contact;
