@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Input, Button, Tooltip, Form } from "antd";
+import { Input, Button, Tooltip, Form, message } from "antd";
 import {
   GithubOutlined,
   LinkedinOutlined,
@@ -7,21 +7,25 @@ import {
 } from "@ant-design/icons";
 import style from "./Contact.module.css";
 import emailjs from "emailjs-com";
+import { useForm } from "antd/es/form/Form";
 
 interface keysType {
-  firstname: string;
+  name: string;
   email: string;
   message: string;
 }
 
 const Contact: FC = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+  const [form] = useForm();
   const onFinish = (values: keysType) => {
+    console.log(values);
     emailjs
       .send(
         "service_eu0v5cb",
         "template_0rwk7t9",
         {
-          firstName: values.firstname,
+          name: values.name,
           email: values.email,
           message: values.message,
         },
@@ -29,17 +33,19 @@ const Contact: FC = () => {
       )
       .then(
         (response) => {
+          messageApi.success("email sent to successfully!");
+          form.resetFields();
           console.log("SUCCESS!", response.status, response.text);
-          alert("Message sent successfully ✅");
         },
         (err) => {
+          messageApi.error("Failed Please Try to CorrectEmail");
           console.error("FAILED...", err);
-          alert("Failed to send message ❌. Please try again.");
         }
       );
   };
   return (
     <div className={style.parent}>
+      {contextHolder}
       <div className={style.hireMe}>
         <h2>Hire Me</h2>
         <div className={style.underline}></div>
@@ -79,6 +85,7 @@ const Contact: FC = () => {
       </div>
 
       <Form
+        form={form}
         name="contact-form"
         layout="vertical"
         className={style.formContainer}
@@ -87,7 +94,7 @@ const Contact: FC = () => {
         <div className={style.row}>
           <Form.Item
             label="Your Name"
-            name="firstname"
+            name="name"
             rules={[
               { required: true, message: "Please enter your first name" },
             ]}

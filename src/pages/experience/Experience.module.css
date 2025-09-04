@@ -10,10 +10,9 @@
 }
 
 .underLine {
-  width: 60px;
+  width: 100px;
   height: 3px;
   background: var(--cyan-color);
-  margin: 0.5rem 0 2rem 0;
   border-radius: 4px;
 }
 
@@ -22,6 +21,7 @@
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+  margin-top: 28px !important;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -133,6 +133,13 @@
     margin-left: 0 !important;
     margin-top: 2rem !important;
     padding: 2rem 1rem;
+  }
+  .wrapExperience > h2 {
+    font-size: 1.4rem;
+  }
+
+  .underLine {
+    width: 100px;
   }
 
   .card {

@@ -190,9 +190,9 @@
     padding: 3rem 1.5rem;
   }
   .skillText {
-    margin-left: 8% !important; /* thoda kam */
-    align-items: center !important; /* center align text */
-    text-align: center;
+    margin-left: 8% !important;
+    align-items: flex-start !important;
+    text-align: left;
   }
   .sectionTitle {
     font-size: 1.8rem;
@@ -216,9 +216,9 @@
     padding: 2.5rem 1rem;
   }
   .skillText {
-    margin-left: 0 !important;
-    align-items: center !important;
-    text-align: center;
+    margin-left: 4% !important;
+    align-items: flex-start !important;
+    text-align: left;
   }
   .sectionTitle {
     font-size: 1.5rem;

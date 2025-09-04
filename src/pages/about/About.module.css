@@ -15,7 +15,6 @@
   width: 60px;
   height: 3px;
   background: var(--cyan-color);
-  margin: 0.5rem 0 2rem 0;
   border-radius: 4px;
 }
 
@@ -23,6 +22,7 @@
   max-width: 800px;
   padding-left: 12px !important;
   border-left: 8px dashed var(--cyan-color);
+  margin-top: 28px !important;
 }
 
 .subTitle {
@@ -85,23 +85,17 @@
 
 @media (max-width: 600px) {
   .aboutSection {
-    margin-left: 4% !important;
     margin-top: 5% !important;
     padding: 2rem 1rem;
   }
 
   .sectionTitle {
-    font-size: 1.6rem;
-    text-align: center;
+    font-size: 1.4rem;
+    text-align: left;
   }
-
-  .underline {
-    margin: 0.5rem auto 1.5rem auto;
-  }
-
   .aboutContent {
-    border-left: none;
-    padding-left: 0 !important;
+    border-left: 4px dashed var(--cyan-color);
+    padding-left: 10px !important;
   }
 
   .subTitle {

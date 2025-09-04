@@ -138,9 +138,12 @@
 
 @media (max-width: 480px) {
   .parent {
-    margin-left: 0 !important;
-    align-items: center;
+    margin-left: 4% !important;
+    align-items: flex-start;
     padding: 2rem 1rem;
+  }
+  .hireMe > h2 {
+    font-size: 1.4rem;
   }
 
   .formContainer {
