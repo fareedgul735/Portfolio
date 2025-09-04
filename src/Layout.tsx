@@ -10,6 +10,8 @@ import {
 import { useState, type FC } from "react";
 
 const Layout: FC = () => {
+  const [showPic, setShowPic] = useState<boolean>(false);
+
   const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
@@ -55,7 +57,10 @@ const Layout: FC = () => {
         </div>
         <Drawer
           title={
-            <div className="drawer-title-wrapper">
+            <div
+              onClick={() => setShowPic(true)}
+              className="drawer-title-wrapper"
+            >
               <img
                 src="/fareedgul.jpg"
                 alt="avatar"
@@ -112,6 +117,16 @@ const Layout: FC = () => {
           <Outlet />
         </div>
       </div>
+      {showPic && (
+        <div className={"overlay"}>
+          <button onClick={() => setShowPic(false)} className={"closeBtn"}>
+            ✕
+          </button>
+          <div className={"modal"}>
+            <img src={"/fareedgul.jpg"} alt="fareedgul" className={"image"} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

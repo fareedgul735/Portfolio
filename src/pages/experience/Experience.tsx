@@ -1,10 +1,12 @@
 import { useState, type FC } from "react";
 import style from "./Experience.module.css";
+import { experienceData } from "../../lib/Constant";
 
 const Experience: FC = () => {
-  const [moreWords, setMoreWords] = useState<boolean>(false);
-  const showText = () => {
-    setMoreWords(true);
+  const [showPic, setShowPic] = useState<boolean>(false);
+  const [moreWords, setMoreWords] = useState<string | null>(null);
+  const showText = (id: any) => {
+    setMoreWords((prev) => (prev === id ? null : id));
   };
   return (
     <div className={style.parent}>
@@ -12,40 +14,47 @@ const Experience: FC = () => {
         <h2>Experience</h2>
         <div className={style.underLine}></div>
       </div>
-      <div className={style.card}>
-        <div className={style.cardImage}>
-          <img src="/FareedExperienceLetterPic.jpg" alt="ExperienceLetter" />
+      {experienceData.map((expData) => (
+        <div className={style.card} key={expData.id}>
+          <div onClick={() => setShowPic(true)} className={style.cardImage}>
+            <img src={expData.img} alt={expData.id} />
+          </div>
+          <div className={style.cardContent}>
+            <h4>{expData.title}</h4>
+            <p>
+              {expData.shortDesc}
+              <span
+                className={style.seeMore}
+                onClick={() => showText(expData.id)}
+              >
+                {moreWords === expData.id ? " See Less..." : " See More..."}
+              </span>
+              {moreWords === expData.id && <p>{expData.longDesc}</p>}
+            </p>
+            <a
+              href="/Fareed Gul Internship Letter.pdf"
+              target="blank"
+              className={style.pdfBtn}
+            >
+              View PDF
+            </a>
+          </div>
         </div>
-        <div className={style.cardContent}>
-          <h4>Frontend Developer Internship</h4>
-          <p>
-            Worked as a <b>Frontend Developer Intern</b> (3 months) where I
-            handled <b>Next.js, TypeScript</b> and <b>SCSS</b> for building a
-            project.
-            <span className={style.seeMore} onClick={showText}>
-              {moreWords ? " See Less..." : " See More..."}
-            </span>
-            {moreWords && (
-              <p>
-                The project idea was to create a platform where school, college
-                or tuition heads/owners can send and manage students’ documents,
-                signatures and messages via email. Multiple recipients can
-                receive any file and perform actions. Although due to some
-                issues the final deployment wasn’t delivered, the internship
-                gave me <b>3 months of valuable hands-on experience</b> in
-                frontend development.
-              </p>
-            )}
-          </p>
-          <a
-            href="/Fareed Gul Internship Letter.pdf"
-            target="blank"
-            className={style.pdfBtn}
-          >
-            View PDF
-          </a>
-        </div>
-      </div>
+      ))}
+      {showPic &&
+        experienceData.map((expData) => (
+          <div className={style.overlay}>
+            <button
+              onClick={() => setShowPic(false)}
+              className={style.closeBtn}
+            >
+              ✕
+            </button>
+            <div className={style.modal}>
+              <img src={expData.img} alt={expData.id} className={style.image} />
+            </div>
+          </div>
+        ))}
     </div>
   );
 };
