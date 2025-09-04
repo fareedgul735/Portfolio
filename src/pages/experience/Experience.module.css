@@ -1,0 +1,162 @@
+.parent {
+  padding: 4rem 2rem;
+  text-align: left;
+  margin-left: 12% !important;
+  margin-top: 6% !important;
+}
+.wrapExperience > h2 {
+  font-size: 2rem;
+  color: var(--cyan-color);
+}
+
+.underLine {
+  width: 60px;
+  height: 3px;
+  background: var(--cyan-color);
+  margin: 0.5rem 0 2rem 0;
+  border-radius: 4px;
+}
+
+.card {
+  width: 80% !important;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: var(--white-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cardImage img {
+  align-self: center !important;
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  border: 1px solid var(--cyan-color);
+}
+
+.cardImage img:hover {
+  transform: scale(0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardContent h4 {
+  margin-bottom: 0.5rem;
+  color: var(--cyan-color);
+}
+
+.cardContent p {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.seeMore {
+  color: var(--cyan-color);
+  position: relative;
+  cursor: pointer;
+}
+
+.seeMore::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--cyan-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.seeMore:hover::after {
+  width: 100%;
+}
+
+.pdfBtn {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: none;
+  background: var(--cyan-color);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pdfBtn:hover {
+  background: #009e9e;
+}
+
+@media (max-width: 1024px) {
+  .parent {
+    margin-left: 5% !important;
+    margin-top: 4% !important;
+    padding: 3rem 1.5rem;
+  }
+
+  .wrapExperience > h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90% !important;
+  }
+
+  .cardImage img {
+    width: 300px;
+  }
+
+  .cardContent h4 {
+    font-size: 1.2rem;
+  }
+
+  .cardContent p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .parent {
+    margin-left: 0 !important;
+    margin-top: 2rem !important;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    width: 100% !important;
+    padding: 1rem;
+  }
+
+  .cardImage img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .cardContent h4 {
+    font-size: 1.1rem;
+  }
+
+  .cardContent p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .pdfBtn {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}

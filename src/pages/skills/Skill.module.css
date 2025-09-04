@@ -1,6 +1,7 @@
 .skillSection {
   padding: 4rem 2rem;
   width: 100% !important;
+  margin-top: 6% !important;
 }
 .skillText {
   display: flex;

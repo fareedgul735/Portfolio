@@ -5,6 +5,7 @@
   color: var(--white-color);
   padding: 3rem 5rem;
   height: auto;
+  margin-top: 6% !important;
 }
 
 .left {
@@ -83,31 +84,38 @@
 @media (max-width: 992px) {
   .parent {
     flex-direction: column;
-    padding: 2rem 1.5rem; /* left-right padding kam kiya */
+    padding: 2rem 1.5rem;
     margin-top: 88px !important;
-    width: 100%; /* full screen cover kare */
-    text-align: center; /* center align */
+    width: 100%;
+    text-align: center;
   }
 
   .left {
-    max-width: 100%; /* puri width */
+    max-width: 100%;
     width: 100%;
   }
 
   .buttons {
-    width: 100%; /* buttons stretch */
+    width: 100%;
     justify-content: center;
     gap: 1rem;
   }
 
   .cvBtn,
   .hireMe {
-    flex: 1; /* tablet pe equal space le */
+    flex: 1;
     padding: 0.7rem 1rem;
   }
 
   .profileImage {
     display: none !important;
+  }
+
+  .contactInfo {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 

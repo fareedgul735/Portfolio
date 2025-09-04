@@ -5,12 +5,38 @@ import {
   LinkedinOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
-
 import style from "./Contact.module.css";
+import emailjs from "emailjs-com";
+
+interface keysType {
+  firstname: string;
+  email: string;
+  message: string;
+}
 
 const Contact: FC = () => {
-  const onFinish = (values: string) => {
-    console.log(values, "values in forma ");
+  const onFinish = (values: keysType) => {
+    emailjs
+      .send(
+        "service_eu0v5cb",
+        "template_0rwk7t9",
+        {
+          firstName: values.firstname,
+          email: values.email,
+          message: values.message,
+        },
+        "xDpN_2vLkQWcM3n5t"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Message sent successfully ✅");
+        },
+        (err) => {
+          console.error("FAILED...", err);
+          alert("Failed to send message ❌. Please try again.");
+        }
+      );
   };
   return (
     <div className={style.parent}>
@@ -60,21 +86,18 @@ const Contact: FC = () => {
       >
         <div className={style.row}>
           <Form.Item
-            label="First Name"
-            name="firstName"
+            label="Your Name"
+            name="firstname"
             rules={[
               { required: true, message: "Please enter your first name" },
             ]}
             className={style.formGroup}
           >
-            <Input
-              placeholder="Enter your first name"
-              className={style.input}
-            />
+            <Input placeholder="Enter your name" className={style.input} />
           </Form.Item>
 
           <Form.Item
-            label="Email"
+            label="Your Email"
             name="email"
             rules={[
               { required: true, message: "Please enter your email" },

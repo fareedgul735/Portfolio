@@ -7,11 +7,14 @@
 }
 
 .navbar-wrapper {
+  width: 100% !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--dark-black-purple-color);
+  backdrop-filter: blur(10px);
   padding: 20px 5%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
