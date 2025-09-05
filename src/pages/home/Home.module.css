@@ -18,7 +18,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .highlight {
@@ -80,6 +79,7 @@
   border-radius: 12px;
   font-weight: 700;
   box-shadow: 0 0 20px var(--cyan-color);
+  cursor: pointer;
 }
 .overlay {
   position: fixed;

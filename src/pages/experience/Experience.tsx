@@ -1,6 +1,7 @@
 import { useState, type FC } from "react";
 import style from "./Experience.module.css";
 import { experienceData } from "../../lib/Constant";
+import { CloseOutlined } from "@ant-design/icons";
 
 const Experience: FC = () => {
   const [showPic, setShowPic] = useState<boolean>(false);
@@ -48,7 +49,7 @@ const Experience: FC = () => {
               onClick={() => setShowPic(false)}
               className={style.closeBtn}
             >
-              ✕
+              <CloseOutlined />
             </button>
             <div className={style.modal}>
               <img src={expData.img} alt={expData.id} className={style.image} />

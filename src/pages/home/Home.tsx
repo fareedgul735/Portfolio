@@ -1,6 +1,6 @@
 import { useState, type FC } from "react";
 import style from "./Home.module.css";
-import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
+import { CloseOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 const Home: FC = () => {
@@ -50,17 +50,18 @@ const Home: FC = () => {
         </div>
       </div>
 
-      <div onClick={() => setShowPic(true)} className={style.right}>
+      <div className={style.right}>
         <img
+          onClick={() => setShowPic(true)}
           src="/fareedgul.jpg"
           alt="Profile"
           className={style.profileImage}
         />
       </div>
       {showPic && (
-        <div className={style.overlay}>
+        <div onClick={() => setShowPic(false)} className={style.overlay}>
           <button onClick={() => setShowPic(false)} className={style.closeBtn}>
-            ✕
+           <CloseOutlined />
           </button>
           <div className={style.modal}>
             <img

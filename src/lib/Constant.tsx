@@ -67,23 +67,34 @@ interface ProjectData {
   description: string;
   image: string;
   link: string;
+  categories: string;
 }
 
 export const projects: ProjectData[] = [
   {
     id: 1,
-    title: "Social Blogs Platform",
+    title: "BlogsLife",
     description:
-      "A blogging platform where users can create, read, update, and delete posts with authentication. Built using Next.js, Firebase, and Supabase for media storage.",
-    image: "/UIUX.jpg",
-    link: "https://yourprojectlink.com",
+      "A full-stack blogging platform built with **HTML, CSS, JavaScript** on the frontend and **Firebase & Supabase** for backend services.  The design takes inspiration from Facebook, but with a unique blogging style.  It includes **secure authentication** where users must sign up or log in before accessing the dashboard. Once logged in, they can explore blogs from around the world with images, like and share posts, and view detailed blog pages.  Users can also **create, edit, and delete their own blogs** with images. A dedicated **Profile Page** allows them to manage their personal information, while additional pages such as **About** and **Help Center** enhance the user experience.  This project demonstrates my ability to build a **complete full-stack application** with authentication, real-time database management, and modern UI/UX.",
+    image: "/BlogsLife.webp",
+    link: "https://blogs-life.vercel.app",
+    categories: "Javascript",
   },
   {
     id: 2,
-    title: "Quiz App",
+    title: "Calcualtor",
     description:
-      "A React + TypeScript quiz application with dynamic questions, options, and score tracking.",
-    image: "/quiz-project.jpg",
-    link: "https://yourquizprojectlink.com",
+      "A simple Calculator built with HTML, CSS, and vanilla JavaScript — supports basic arithmetic, keyboard input, clear/backspace, and a responsive layout.",
+    image: "/Calculator.jpeg",
+    link: "https://calculator-gilt-two-37.vercel.app",
+    categories: "Javascript",
   },
+];
+
+export const categories = [
+  "All",
+  "Javascript",
+  "Typescript",
+  "NextJs",
+  "ReactJs",
 ];
