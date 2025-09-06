@@ -11,6 +11,7 @@ body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   background: var(--dark-black-purple-color);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
