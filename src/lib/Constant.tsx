@@ -155,20 +155,20 @@ export const projects: ProjectData[] = [
   },
   {
     id: 10,
+    title: "Ticket Management System",
+    description:
+      "A professional Ticket Management System built with React.js, designed to streamline issue tracking and task management. The project implements Redux Toolkit and Context API for powerful state management, along with Redux Persist to maintain state across sessions. Firebase is integrated for real-time database and authentication. Users can create, assign, update, and resolve tickets, making it an efficient solution for handling customer support requests, IT helpdesk queries, or internal project tasks. The system provides a clean and responsive UI with reliable functionality.",
+    image: "/tms.png",
+    link: "https://ticket-management-chi.vercel.app",
+    categories: "ReactJs",
+  },
+  {
+    id: 11,
     title: "Todo App",
     description:
       "A feature-rich Todo App built with React.js, implementing full CRUD operations. Tasks can be created, updated, deleted, and marked as complete/incomplete. The app uses LocalStorage for data persistence, ensuring tasks remain saved even after refresh. SweetAlert is integrated for beautiful confirmation modals and alerts, enhancing the overall user experience. A clean, responsive design makes task management smooth and intuitive.",
     image: "/todoapp.webp",
     link: "https://todo-list-react-js-1eh6.vercel.app",
-    categories: "ReactJs",
-  },
-  {
-    id: 11,
-    title: "Ticket Management System",
-    description:
-      "A feature-rich Todo App built with React.js, implementing full CRUD operations. Tasks can be created, updated, deleted, and marked as complete/incomplete. The app uses LocalStorage for data persistence, ensuring tasks remain saved even after refresh. SweetAlert is integrated for beautiful confirmation modals and alerts, enhancing the overall user experience. A clean, responsive design makes task management smooth and intuitive.",
-    image: "/tms.png",
-    link: "https://ticket-management-chi.vercel.app",
     categories: "ReactJs",
   },
 ];
