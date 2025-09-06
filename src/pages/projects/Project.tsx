@@ -12,7 +12,7 @@ const Project: FC = () => {
   return (
     <div className={style.parent}>
       <div className={style.wrapHeading}>
-        <h2>Projects</h2>
+        <h2>Projects({projects.length})</h2>
         <div className={style.underLine}></div>
       </div>
       <div className={style.navbar}>
@@ -39,12 +39,15 @@ const Project: FC = () => {
           </div>
           <div className={style.cardContent}>
             <a
-              style={{ textDecoration: "none", }}
+              style={{ textDecoration: "none" }}
               target="blank"
               href={project.link}
             >
-              <h4>{project.title}</h4>
+              <Tooltip title={"Click Here"} color="cyan">
+                <span color="cyan">{project.title}</span>
+              </Tooltip>
             </a>
+
             <p>{project.description}</p>
           </div>
         </div>
