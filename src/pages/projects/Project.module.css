@@ -56,6 +56,9 @@
   color: #444;
   line-height: 1.5;
 }
+a {
+  color: var(--cyan-color);
+}
 .navbar {
   display: flex;
   gap: 1rem;
