@@ -7,10 +7,12 @@ import Project from "./pages/projects/Project";
 import Skill from "./pages/skills/Skill";
 import Contact from "./pages/contact/Contact";
 import Experience from "./pages/experience/Experience";
+import NetworkStatus from "./components/NetworkStatus";
 
 const App = () => {
   return (
     <>
+      <NetworkStatus />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
