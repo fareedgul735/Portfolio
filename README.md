@@ -18,3 +18,8 @@ nodemailer
 resend
 
 mailgun-js
+
+👉 Lazy loading ek optimization technique hai jisme React component ya page tabhi load hota hai jab user usse access kare, instead of sab ek sath load karne ke.
+
+⚡ Pehle: sab ek hi bundle me load ho jaata tha → first load heavy.
+⚡ Ab (lazy loading): sirf jo component chahiye wahi load hota hai → fast initial load, better UX.

@@ -13,7 +13,17 @@ body {
   background: var(--dark-black-purple-color);
   overflow-x: hidden;
 }
-
+.lazyloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: var(--dark-black-purple-color);
+}
+.ant-spin-dot-item {
+  background-color: var(--cyan-color) !important;
+}
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
