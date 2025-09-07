@@ -45,7 +45,24 @@ export const servicesData = [
       "I build and manage robust backend systems with secure APIs and databases.",
     longDesc:
       "From RESTful APIs to database management, I handle server-side logic and integrations using Node.js, Express, Firebase, and MongoDB. Ensuring scalability, authentication, and smooth communication between frontend and backend.",
-    hosting: "Hosting: GitHub Netlify Vercel AWS Firebase",
+  },
+  {
+    id: "SEO Optimization",
+    title: "SEO Optimization",
+    img: "/seo.png",
+    shortDesc:
+      "I optimize websites to rank higher in search engines and drive organic traffic.",
+    longDesc:
+      "With expertise in keyword research, on-page optimization, and technical SEO, I help businesses improve their search visibility and attract targeted audiences. My SEO strategies focus on long-term growth by boosting website rankings, enhancing user engagement, and increasing conversions.",
+  },
+  {
+    id: "Digital Marketing",
+    title: "Digital Marketing & Campaigns",
+    img: "/markiting.webp",
+    shortDesc:
+      "I run effective digital marketing campaigns across Instagram, Facebook, and YouTube to grow brand awareness.",
+    longDesc:
+      "From social media campaigns to video marketing, I help brands reach their audience through engaging ads and strategies. I create and manage campaigns on Instagram, Facebook, and YouTube, ensuring maximum ROI with proper audience targeting, analytics tracking, and creative content. My approach combines organic growth with paid promotions to deliver impactful results.",
   },
 ];
 

@@ -20,7 +20,11 @@ const NetworkStatus = () => {
   if (!isOnline) {
     return (
       <div className={style.overlay}>
-        <img src="/gif-offline.gif" alt="No Internet" className={style.image} />
+        <div className={style.icon}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <p className={style.text}>
           You are offline. Please check your connection.
         </p>
