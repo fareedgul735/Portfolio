@@ -35,7 +35,6 @@ const Services: FC = () => {
               {moreWords === service.id && (
                 <p>
                   {service.longDesc}
-                  <b>{service.hosting}</b>
                 </p>
               )}
             </p>
