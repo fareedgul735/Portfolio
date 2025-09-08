@@ -18,7 +18,7 @@ const App = () => {
       <NetworkStatus />
       <Suspense
         fallback={
-          <div className="lazyloader">
+          <div className="lazyloading">
             <Spin size="large" />
           </div>
         }

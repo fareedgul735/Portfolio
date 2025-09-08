@@ -13,7 +13,7 @@ body {
   background: var(--dark-black-purple-color);
   overflow-x: hidden;
 }
-.lazyloader {
+.lazyloading {
   display: flex;
   justify-content: center;
   align-items: center;
