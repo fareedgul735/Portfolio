@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import NetworkStatus from "./components/NetworkStatus";
 import React, { Suspense } from "react";
 import { Spin } from "antd";
+import NotFound from "./NotFound";
 
 const Home = React.lazy(() => import("./pages/home/Home"));
 const About = React.lazy(() => import("./pages/about/About"));
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/experience" element={<Experience />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>

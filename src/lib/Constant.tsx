@@ -188,6 +188,15 @@ export const projects: ProjectData[] = [
     link: "https://todo-list-react-js-1eh6.vercel.app",
     categories: "ReactJs",
   },
+  {
+    id: 12,
+    title: "GymScanner",
+    description:
+      "A feature-rich GymScanner built with React.js, & tailwind.css full Dynamic content. using the reuseable components!",
+    image: "/Background_Image.png",
+    link: "https://gym-scanner-flame.vercel.app/",
+    categories: "ReactJs",
+  },
 ];
 
 export const categories = [
