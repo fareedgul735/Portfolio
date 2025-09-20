@@ -53,7 +53,7 @@ const Home: FC = () => {
       <div className={style.right}>
         <img
           onClick={() => setShowPic(true)}
-          src="/fareedgul.jpg"
+          src="/fareed.jpeg"
           alt="Profile"
           className={style.profileImage}
         />
@@ -61,14 +61,10 @@ const Home: FC = () => {
       {showPic && (
         <div onClick={() => setShowPic(false)} className={style.overlay}>
           <button onClick={() => setShowPic(false)} className={style.closeBtn}>
-           <CloseOutlined />
+            <CloseOutlined />
           </button>
           <div className={style.modal}>
-            <img
-              src={"/fareedgul.jpg"}
-              alt="fareedgul"
-              className={style.image}
-            />
+            <img src={"/fareed.jpeg"} alt="fareedgul" className={style.image} />
           </div>
         </div>
       )}

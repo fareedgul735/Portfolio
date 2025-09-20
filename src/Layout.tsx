@@ -61,11 +61,7 @@ const Layout: FC = () => {
               onClick={() => setShowPic(true)}
               className="drawer-title-wrapper"
             >
-              <img
-                src="/fareedgul.jpg"
-                alt="avatar"
-                className="drawer-avatar"
-              />
+              <img src="/fareed.jpeg" alt="avatar" className="drawer-avatar" />
               <span className="drawer-logo">{"< Fareed Gul />"}</span>
             </div>
           }
@@ -123,7 +119,7 @@ const Layout: FC = () => {
             ✕
           </button>
           <div className={"modal"}>
-            <img src={"/fareedgul.jpg"} alt="fareedgul" className={"image"} />
+            <img src={"/fareed.jpeg"} alt="fareedgul" className={"image"} />
           </div>
         </div>
       )}
