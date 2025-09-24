@@ -52,16 +52,6 @@ const Contact: FC = () => {
       </div>
 
       <div className={style.socialLinks}>
-        <Tooltip title={"Github"} placement="left" color="cyan">
-          <a
-            href="https://github.com/account"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={style.iconBox}
-          >
-            <GithubOutlined className={style.icon} />
-          </a>
-        </Tooltip>
         <Tooltip title={"Linkedin"} placement="top" color="cyan">
           <a
             href="https://www.linkedin.com/in/fareed-khan-946329333/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHFj1E3C%2FQWKjLNMC8j2IEQ%3D%3D"
