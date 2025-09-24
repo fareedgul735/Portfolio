@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import { Input, Button, Tooltip, Form, message } from "antd";
 import {
-  GithubOutlined,
   LinkedinOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";

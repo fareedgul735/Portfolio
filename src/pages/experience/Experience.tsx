@@ -15,7 +15,7 @@ const Experience: FC = () => {
       </div>
       {experienceData.map((expData) => (
         <div className={style.card} key={expData.id}>
-          <div onClick={() => setShowPic(true)} className={style.cardImage}>
+          <div className={style.cardImage}>
             <img src={expData.img} alt={expData.id} />
           </div>
           <div className={style.cardContent}>
