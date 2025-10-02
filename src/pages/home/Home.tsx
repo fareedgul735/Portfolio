@@ -41,7 +41,7 @@ const Home: FC = () => {
         </div>
 
         <div className={style.buttons}>
-          <a href="/fareedgul.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/Fareed Gul.pdf" target="_blank" rel="noopener noreferrer">
             <button className={style.cvBtn}>View CV</button>
           </a>
           <Link to={"/contact"}>

@@ -72,9 +72,9 @@ export const experienceData = [
     title: "Frontend Development Internship",
     img: "/FareedExperienceLetterPic.jpg",
     shortDesc:
-      "Worked as a Frontend Developer Intern(3 months) where I handled Next.js, TypeScript and SCSS for building a project.",
+      "Worked as a Frontend Developer (6 months) where I handled Next.js, TypeScript and SCSS for build a project.",
     longDesc:
-      "The project idea was to create a platform where school,college or tuition heads/owners can send and manage students’documents, signatures and messages via email. Multiplerecipients can receive any file and perform actions. Thisinternship gave me  3 months of valuable hands-on experience in frontend development.",
+      "The project idea was to create a platform where school,college or tuition heads/owners can send and manage students’documents, signatures and messages via email. Multiplerecipients can receive any file and perform actions. This experience gave me 6 months of valuable hands-on experience in frontend development.",
   },
 ];
 
