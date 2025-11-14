@@ -1,10 +1,9 @@
-import { useState, type FC } from "react";
 import style from "./Project.module.css";
 import { projects } from "../../lib/Constant";
 import { Tooltip } from "antd";
+import type { FC } from "react";
 
 const Project: FC = () => {
-  const [activeCategory, setActiveCategoy] = useState<string>("All");
   return (
     <div className={style.parent}>
       <div className={style.wrapHeading}>

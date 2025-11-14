@@ -117,10 +117,3 @@ export const projects: ProjectData[] = [
   },
 ];
 
-export const categories = [
-  "All",
-  "Javascript",
-  "Typescript",
-  "NextJs",
-  "ReactJs",
-];
