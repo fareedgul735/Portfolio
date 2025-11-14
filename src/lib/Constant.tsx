@@ -98,79 +98,6 @@ export const projects: ProjectData[] = [
     categories: "Javascript",
   },
   {
-    id: 2,
-    title: "Calcualtor",
-    description:
-      "A simple Calculator built with HTML, CSS, and vanilla JavaScript — supports basic arithmetic, keyboard input, clear/backspace, and a responsive layout.",
-    image: "/Calculator.jpeg",
-    link: "https://calculator-gilt-two-37.vercel.app",
-    categories: "Javascript",
-  },
-  {
-    id: 3,
-    title: "JS Online Compiler",
-    description:
-      "An online JavaScript compiler built with HTML, Tailwind CSS, and vanilla JavaScript. The purpose of this project is to provide a simple in-browser editor where users can write and execute JavaScript code instantly.",
-    image: "/javascript-736400_1280.webp",
-    link: "https://free-online-compiler-js.vercel.app",
-    categories: "Javascript",
-  },
-  {
-    id: 4,
-    title: "Snake Game",
-    description:
-      "A classic Snake Game built with HTML, CSS, and vanilla JavaScript. Developed with the help of AI tools, this project focuses on game logic, keyboard controls, and dynamic rendering. While not fully responsive, it works seamlessly on larger screens.",
-    image: "/sanke.jpeg",
-    link: "https://snake-game-one-liart.vercel.app",
-    categories: "Javascript",
-  },
-  {
-    id: 5,
-    title: "To-Do List",
-    description:
-      "A simple To-Do List application built with HTML, CSS, and vanilla JavaScript. Users can add, delete, and mark tasks as completed. Designed to practice DOM manipulation, event handling, and local storage for task persistence.",
-    image: "/todo.jpg",
-    link: "https://todo-rosy-alpha-32.vercel.app",
-    categories: "Javascript",
-  },
-  {
-    id: 6,
-    title: "Prayer Times",
-    description:
-      "A simple Prayer Times app built with HTML, CSS, and JavaScript. It dynamically shows the daily timings for all 5 prayers (Fajr, Dhuhr, Asr, Maghrib, Isha) along with Tahajjud and Ishraq. The background also changes based on the time of day, making the experience more interactive.",
-    image: "/prayer.jpg",
-    link: "https://prayers-times-three.vercel.app",
-    categories: "Javascript",
-  },
-  {
-    id: 7,
-    title: "Quiz App",
-    description:
-      "A quiz application built with React and TypeScript (TSX). The app presents dynamic questions, tracks user answers and points, calculates the final score and percentage, and provides instant pass/fail feedback. Users who score 70% or above are marked as 'Pass', while scores below 70% show 'Fail'. The interface displays a clear results breakdown to help learners identify strengths and areas to improve.",
-    image: "/QuizImage.jpg",
-    link: "https://js-quiz-learn.vercel.app",
-    categories: "Typescript",
-  },
-  {
-    id: 8,
-    title: "To-Do List",
-    description:
-      "A professional To-Do List application built with React and TypeScript. It supports creating, editing, deleting, and marking tasks as completed or incomplete. Users can filter tasks (All, Completed, Incomplete) for better management. The app leverages Context API for global state management and Local Storage for data persistence, ensuring tasks remain saved even after refresh. This project demonstrates a complete CRUD workflow with clean architecture and reusability.",
-    image: "/todolist.png",
-    link: "https://todo-list-mu-wine-78.vercel.app",
-    categories: "Typescript",
-  },
-
-  {
-    id: 9,
-    title: "Horror Layout Website",
-    description:
-      "A multi-page horror-themed layout built with Next.js and TypeScript (TSX). The project features a spooky modern UI with multiple pages, smooth navigation, and a responsive design. Leveraging Next.js capabilities such as file-based routing and optimized performance, this project highlights how powerful and developer-friendly the framework is. Built purely for design and experimentation, it reflects creativity and love for Next.js.",
-    image: "/anabelle.jpg",
-    link: "https://haunt-flix.vercel.app",
-    categories: "NextJs",
-  },
-  {
     id: 10,
     title: "Ticket Management System",
     description:
@@ -179,22 +106,13 @@ export const projects: ProjectData[] = [
     link: "https://ticket-management-chi.vercel.app",
     categories: "ReactJs",
   },
+
   {
-    id: 11,
-    title: "Todo App",
-    description:
-      "A feature-rich Todo App built with React.js, implementing full CRUD operations. Tasks can be created, updated, deleted, and marked as complete/incomplete. The app uses LocalStorage for data persistence, ensuring tasks remain saved even after refresh. SweetAlert is integrated for beautiful confirmation modals and alerts, enhancing the overall user experience. A clean, responsive design makes task management smooth and intuitive.",
-    image: "/todoapp.webp",
-    link: "https://todo-list-react-js-1eh6.vercel.app",
-    categories: "ReactJs",
-  },
-  {
-    id: 12,
-    title: "GymScanner",
-    description:
-      "A feature-rich GymScanner built with React.js, & tailwind.css full Dynamic content. using the reuseable components!",
-    image: "/Background_Image.png",
-    link: "https://gym-scanner-flame.vercel.app/",
+    id: 10,
+    title: "Health Mate",
+    description:"I created an AI-Powered Health Companion App jahan user apni health ke bare mein AI se baat kar sakta hai, apni reports save kar sakta hai, aur apna health data analyze kar sakta hai — jaise sugar, BP, aur temperature tracking. Real-life problem solve karne ka try kiya hai — kai logon ko apni purani reports ya medical data track karna mushkil lagta hai. Is app mein user easily apni health history save kar sakta hai aur AI se suggestions bhi le sakta hai, jaise doctor ke advice type answers.",
+    image: "/health.png",
+    link: "https://health-mate-two-sandy.vercel.app",
     categories: "ReactJs",
   },
 ];
